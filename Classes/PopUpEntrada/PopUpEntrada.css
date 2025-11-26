@@ -1,0 +1,111 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+
+body {
+
+    /* Fondo con un degradado blanco semitransparente encima de la imagen */
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+        url('/Assets/Images/ManchaGymlogo.png');
+
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que se repita */
+    background-size: cover;
+    /* La imagen cubre toda la pantalla */
+    background-attachment: fixed;
+    /* La imagen queda fija al hacer scroll */
+}
+
+#popup,
+#popupNo,
+#popupSi,
+#popupVacio {
+    position: fixed;
+    /* Fija el popup en pantalla aunque se haga scroll */
+    top: 50%;
+    /* Posiciona verticalmente en el centro */
+    left: 50%;
+    /* Posiciona horizontalmente en el centro */
+    transform: translate(-50%, -50%);
+    /* Ajusta para centrar completamente */
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    border: 2px solid black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    animation: mostrar 0.25s ease-out;
+    text-align: center;
+}
+
+
+#popup .botonsi,
+#popup .botonno {
+    margin-top: 20px;
+    /* separación del texto */
+    margin-right: 10px;
+    /* separación entre ellos */
+    width: 50px;
+    height: 30px;
+}
+
+#popup .botonsi:hover,
+#popup .botonno:hover {
+    background-color: aquamarine;
+}
+
+#popupSi .botoncontinuar {
+    margin-top: 15px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#popupSi .botoncontinuar:hover {
+    background-color: aquamarine;
+}
+
+
+/*Esconde el popup de la eleccion si*/
+.hidden {
+    display: none;
+}
+
+#popupSi .nombreusuario {
+    width: 80%;
+    /* Más ancho */
+    padding: 10px 12px;
+    /* Separación interna */
+    margin-top: 15px;
+    /* Separación respecto al texto */
+    border-radius: 6px;
+    /* Bordes suaves */
+    border: 2px solid #bbb;
+    /* Borde gris suave */
+    font-size: 15px;
+    /* Mejor legibilidad */
+    outline: none;
+    /* Quita el borde azul feo */
+}
+
+#popupSi .nombreusuario:focus {
+    border-color: #000;
+    /* Mejor borde al hacer click */
+}
+
+
+
+/* Animación que hace que el popup entre desde arriba */
+
+@keyframes mostrar {
+    from {
+        /* Inicia más arriba de la pantalla */
+        transform: translateY(-200px);
+    }
+}

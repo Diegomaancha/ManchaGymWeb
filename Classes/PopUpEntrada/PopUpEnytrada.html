@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManchaGym</title>
+    <link rel="stylesheet" href="/Classes/PopUpEntrada/PopUpEntrada.css">
+</head>
+
+<body>
+
+    <!-- POPUP PRINCIPAL (Pregunta inicial) -->
+    <!-- El atributo popover permite mostrarlo como popup moderno (HTML nativo) -->
+    <div popover="manual" id="popup">
+        ¿Estás preparado para tu cambio físico?💪
+        <br>
+        <!-- Botón para responder "Sí" -->
+        <button class="botonsi">Si</button>
+        <!-- Botón para responder "No" -->
+        <button class="botonno">No</button>
+
+    </div>
+
+    <div popover="manual" id="popupNo">
+        Vuelve cuando estes listo para el cambio 🔥
+    </div>
+
+    <div popover="manual" id="popupSi" class="hidden">
+        Perfecto, estas en el sitio correcto🔥, ingresa tu nombre y pulsa "continuar"
+        <input type="text" class="nombreusuario" placeholder="Tu nombre...">
+        <button class="botoncontinuar">Continuar</button>
+    </div>
+
+    <div popover="manual" id="popupVacio" class="hidden">
+        El nombre no puede estar vacio
+    </div>
+
+
+
+
+
+    <script src="/Classes/PopUpEntrada/PopUpEntrada.js"></script>
+
+</html>
