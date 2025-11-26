@@ -14,5 +14,7 @@ function mostrarPopup(mensaje) {
     }, 2500);
 }
 
+console.log(localStorage.getItem());
+
 // MOSTRAR POPUP CON EL NOMBRE
 mostrarPopup(`Bienvenido, es hora de ponernos fuertes ${nombreUsuario} 💪`);

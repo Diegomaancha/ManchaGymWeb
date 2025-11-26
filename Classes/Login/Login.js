@@ -27,7 +27,7 @@ btnSi.addEventListener("click", () => {
 
 // ======== NO: NO QUIERE HACER EL CAMBIO ========
 btnNo.addEventListener("click", () => {
-    pregunta.style.display = "none"; 
+    pregunta.style.display = "none";
 
     mostrarPopup("¡Vuelve cuando estés listo para tu cambio físico! 💪");
 
@@ -39,8 +39,12 @@ btnNo.addEventListener("click", () => {
 
 // ======== BOTÓN ENTRAR: GUARDAR NOMBRE Y PASAR A PÁGINA PRINCIPAL ========
 btnEntrar.addEventListener("click", () => {
-    const nombre = document.getElementById("nombre").value.trim();
 
+    /*Crea la constante nombre, cogiendo el texto que hay en el html con el id nombre
+    usando el value y elimina los espacios con el trim*/
+    const nombre = document.getElementById("nombre").value.trim();
+    /*Coge la constante nombre y dice que si esta vacia que salte que
+      escriba un nombre y te hace el return*/
     if (nombre === "") {
         mostrarPopup("Por favor, escribe tu nombre.");
         return;
